@@ -7,6 +7,10 @@
         <element id="directory" name="classes">
           <element id="module-output" name="labo_9" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../UCLL/web 2/labo_6_student/out/artifacts/web_war_exploded/WEB-INF/lib/jstl-1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../UCLL/web 2/oef 2/lib/javax.servlet.jsp.jstl.jar" />
+        </element>
       </element>
     </root>
   </artifact>

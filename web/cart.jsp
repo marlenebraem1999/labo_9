@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <!DOCTYPE html>
@@ -13,6 +14,7 @@
     <jsp:include page="header.jsp">
         <jsp:param name="page" value="Shopping Cart"/>
     </jsp:include>
+
     <main>
             <p>error</p>
             <p>No products in your shopping cart</p>
@@ -24,16 +26,16 @@
                     <th>Price</th>
                     <th>Remove from Cart</th>
                 </tr>
-
+                    <c:forEach var="product" items="${products}">
                     <tr>
-                        <td>productId</td>
-                        <td>name</td>
+                        <td>${product.productId}</td>
+                        <td>${product.name}</td>
                         <td>description</td>
                         <td>price</td>
                         <td><a href="#">Remove From
                             Cart</a></td>
                     </tr>
-
+                    </c:forEach>
                 <caption>Shopping Cart</caption>
             </table>
     </main>

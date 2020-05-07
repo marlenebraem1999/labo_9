@@ -16,7 +16,6 @@
     </jsp:include>
     <main>
         <c:choose>
-            <jsp:useBean id="products" scope="request" type="domain.model.Product"/>
             <c:when test="${not empty products}">
                 <table>
                     <tr>
@@ -32,7 +31,7 @@
                         <td>${product.name}</td>
                         <td>${product.description}</td>
                         <td>${product.price}</td>
-                        <td><a href="#">Add to Cart</a>
+                        <td><a href="Controller?command=addToCart&productId=${product.productId}&name=${product.name}">Add to Cart</a>
                         </td>
                     </tr>
                     </c:forEach>
@@ -40,11 +39,11 @@
                     <caption>Product Overview</caption>
                 </table>
             </c:when>
-            <:c:otherwise>
+            <c:otherwise>
                 <p>error</p>
 
                 <p>No products to show</p>
-            </:c:otherwise>
+            </c:otherwise>
         </c:choose>
     </main>
     <footer>

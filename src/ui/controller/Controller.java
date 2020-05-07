@@ -66,7 +66,7 @@ public class Controller extends HttpServlet {
     }
 
     private String addToCart(HttpServletRequest request, HttpServletResponse response) {
-        return null;
+        return "cart.jsp";
     }
 
     private String showHome(HttpServletRequest request, HttpServletResponse response) {
